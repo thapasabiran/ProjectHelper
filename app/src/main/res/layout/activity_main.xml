@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="167dp"
+        android:text="Welcome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/welcomeSubtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="12sp"
+        android:text="Please enter your location and press continue"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTitleTextView" />
+
+    <TextView
+        android:id="@+id/welcomeLocationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="12sp"
+        android:text="Location (ZIP or city)"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeSubtitleTextView" />
+
+    <TextView
+        android:id="@+id/welcomeUnitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Units (C or F)"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeLocationTextLayout"
+        android:layout_marginTop="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/welcomeLocationTextLayout"
+        android:layout_width="267dp"
+        android:layout_height="53dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeLocationTextView"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxStrokeColor="@color/blue"
+        app:boxStrokeErrorColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/welcomeUnitsTextLayout"
+        android:layout_width="268dp"
+        android:layout_height="51dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxStrokeColor="@color/teal_700"
+        app:boxStrokeErrorColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUnitTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/welcomeContinueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Continue"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeUnitsTextLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
